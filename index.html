@@ -1,1 +1,32 @@
-it updated
+
+       <head>
+       <script>
+       function autoRedirect(URL) 
+       {
+           localStorage.setItem('lastURL', URL);
+           window.location.href = URL;
+       }
+       </script>
+
+       <script>
+       function autoRoute()
+       {
+           var urls = ['https://394d-103-215-237-123.ngrok-free.app', 'https://b1ba-103-215-237-123.ngrok-free.app', 'https://9b1a-103-215-237-123.ngrok-free.app']
+           oldURL = localStorage.lastURL;
+           if (urls.includes(oldURL)) 
+           {
+               autoRedirect(oldURL);
+           }
+           else
+           {
+               url = urls[Math.floor(Math.random() * urls.length)].concat("route");
+               fetch(url, {headers: {"ngrok-skip-browser-warning": "bruhh"}})
+               .then(response => response.text())
+               .then(text => {autoRedirect(text);});
+           }
+       }
+       </script>
+
+       </head>
+       <body onload=autoRoute()><div id="demo">REDIRECTING...</div></body>
+       
