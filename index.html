@@ -2,25 +2,23 @@
        <head>
        <script>
        function autoRedirect(URL) 
-       {
+        {
             console.log("REDIRECTING TO");
             console.log(URL);
-           localStorage.setItem('lastURL', URL);
-           
-           //window.location.href = URL;
-       }
-       </script>
-
-       <script>
-       function autoRoute()
-       {
-           var urls = ['https://1e9b-103-215-237-96.ngrok-free.app/', 'https://93a7-103-215-237-96.ngrok-free.app/', 'https://865a-103-215-237-96.ngrok-free.app/', 'https://f9b5-103-215-237-96.ngrok-free.app/', 'https://f1ca-103-215-237-96.ngrok-free.app/', 'https://4561-103-215-237-96.ngrok-free.app/', 'https://7df7-103-215-237-96.ngrok-free.app/', 'https://3203-103-215-237-96.ngrok-free.app/', 'https://7057-103-215-237-96.ngrok-free.app/', 'https://b69a-103-215-237-96.ngrok-free.app/', 'https://dbcc-103-215-237-96.ngrok-free.app/', 'https://71d1-103-215-237-96.ngrok-free.app/'];
+            localStorage.setItem('lastURL', URL);   
+            window.location.href = URL;
+        }
+        </script>
+        
+        <script>
+        function autoRoute()
+        {
+           var urls = ['https://b3bc-103-215-237-96.ngrok-free.app/', 'https://43ef-103-215-237-96.ngrok-free.app/', 'https://7669-103-215-237-96.ngrok-free.app/', 'https://4c90-103-215-237-96.ngrok-free.app/', 'https://8f1d-103-215-237-96.ngrok-free.app/', 'https://857b-103-215-237-96.ngrok-free.app/', 'https://47e3-103-215-237-96.ngrok-free.app/', 'https://132c-103-215-237-96.ngrok-free.app/', 'https://78a7-103-215-237-96.ngrok-free.app/', 'https://2356-103-215-237-96.ngrok-free.app/', 'https://ad36-103-215-237-96.ngrok-free.app/', 'https://221a-103-215-237-96.ngrok-free.app/'];
            if (urls.length == 0) {location.reload();}
            oldURL = localStorage.lastURL;
            if (urls.includes(oldURL)) 
            {
                console.log("OLD URL");
-               console.log(oldURL);
                autoRedirect(oldURL);
            }
            else
@@ -30,9 +28,9 @@
                .then(response => response.text())
                .then(text => {autoRedirect(text);});
            }
-       }
-       </script>
-
-       </head>
-       <body onload=autoRoute()><div id="demo">REDIRECTING...</div></body>
-       
+        }
+        </script>
+        
+        </head>
+        <body onload=autoRoute()><div id="demo">REDIRECTING...</div></body>
+        
