@@ -4,6 +4,7 @@
         <meta http-equiv="cache-control" content="no-cache" />
         <meta http-equiv="expires" content="0" />
         <meta http-equiv="pragma" content="no-cache" />
+        
        <script>
        function autoRedirect(URL) 
         {
@@ -13,25 +14,31 @@
             window.location.href = URL;
         }
         </script>
-        
+
         <script>
         function autoRoute()
         {
-           var urls = ['https://23ec-38-156-47-246.ngrok-free.app/', 'https://9394-38-156-47-246.ngrok-free.app/', 'https://58f2-38-156-47-246.ngrok-free.app/', 'https://9bbf-38-156-47-246.ngrok-free.app/', 'https://b72c-38-156-47-246.ngrok-free.app/', 'https://e2b2-38-156-47-246.ngrok-free.app/', 'https://b4f6-38-156-47-246.ngrok-free.app/', 'https://602a-38-156-47-246.ngrok-free.app/', 'https://2fc9-38-156-47-246.ngrok-free.app/', 'https://da33-38-156-47-246.ngrok-free.app/', 'https://bdd2-38-156-47-246.ngrok-free.app/', 'https://cb31-38-156-47-246.ngrok-free.app/'];
+           var urls = ['https://49de-38-156-47-155.ngrok-free.app/', 'https://ae9e-38-156-47-155.ngrok-free.app/', 'https://9467-38-156-47-155.ngrok-free.app/', 'https://1d55-38-156-47-155.ngrok-free.app/', 'https://e9c2-38-156-47-155.ngrok-free.app/', 'https://556c-38-156-47-155.ngrok-free.app/', 'https://13ec-38-156-47-155.ngrok-free.app/', 'https://ac9a-38-156-47-155.ngrok-free.app/', 'https://7827-38-156-47-155.ngrok-free.app/', 'https://7bad-38-156-47-155.ngrok-free.app/', 'https://b55b-38-156-47-155.ngrok-free.app/', 'https://e2ad-38-156-47-155.ngrok-free.app/'];
            if (urls.length == 0) {location.reload();}
-           oldURL = localStorage.lastURL;
+           var oldURL = localStorage.lastURL;
            if (urls.includes(oldURL)) 
            {
                console.log("OLD URL");
-               autoRedirect(oldURL);
+               //autoRedirect(oldURL);
            }
            else
            {
-               url = urls[Math.floor(Math.random() * urls.length)].concat("route");
-               fetch(url, {headers: {"ngrok-skip-browser-warning": "bruhh"}})
-               .then(response => response.text())
-               .then(text => {autoRedirect(text);});
+               url = urls[Math.floor(Math.random() * urls.length)];
+               console.log("OLD URL");
+               //autoRedirect(url);
            }
+           //else
+           //{
+               //url = urls[Math.floor(Math.random() * urls.length)].concat("route");
+               //fetch(url, {headers: {"ngrok-skip-browser-warning": "bruhh"}})
+               //.then(response => response.text())
+               //.then(text => {autoRedirect(text);});
+           //}
         }
         </script>
         
