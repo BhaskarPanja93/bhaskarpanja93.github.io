@@ -11,28 +11,28 @@
             console.log("REDIRECTING TO");
             console.log(URL);
             localStorage.setItem('lastURL', URL);   
-            window.location.href = URL;
+            //window.location.href = URL;
         }
         </script>
 
         <script>
         function autoRoute()
         {
-           var urls = ['https://8dc6-103-215-237-34.ngrok-free.app/', 'https://09c9-103-215-237-34.ngrok-free.app/', 'https://8422-103-215-237-34.ngrok-free.app/', 'https://b523-103-215-237-34.ngrok-free.app/', 'https://7845-103-215-237-34.ngrok-free.app/', 'https://322b-103-215-237-34.ngrok-free.app/', 'https://4003-103-215-237-34.ngrok-free.app/', 'https://066d-103-215-237-34.ngrok-free.app/', 'https://6762-103-215-237-34.ngrok-free.app/', 'https://4dcb-103-215-237-34.ngrok-free.app/', 'https://c476-103-215-237-34.ngrok-free.app/', 'https://5752-103-215-237-34.ngrok-free.app/'];
+           var urls = ['https://16ae-103-215-237-34.ngrok-free.app/', 'https://9a67-103-215-237-34.ngrok-free.app/', 'https://324d-103-215-237-34.ngrok-free.app/', 'https://f2de-103-215-237-34.ngrok-free.app/', 'https://bbf0-103-215-237-34.ngrok-free.app/', 'https://52af-103-215-237-34.ngrok-free.app/', 'https://ff02-103-215-237-34.ngrok-free.app/', 'https://5a41-103-215-237-34.ngrok-free.app/', 'https://8363-103-215-237-34.ngrok-free.app/', 'https://8c91-103-215-237-34.ngrok-free.app/', 'https://7d4b-103-215-237-34.ngrok-free.app/', 'https://3fbf-103-215-237-34.ngrok-free.app/'];
            if (urls.length == 0) {location.reload();}
            var oldURL = localStorage.lastURL;
            if (urls.includes(oldURL)) 
            {
                console.log("OLD");
                console.log(oldURL);
-               //autoRedirect(oldURL);
+               autoRedirect(oldURL);
            }
            else
            {
                url = urls[Math.floor(Math.random() * urls.length)];
                console.log("NEW");
                console.log(url);
-               //autoRedirect(url);
+               autoRedirect(url);
            }
            //else
            //{
