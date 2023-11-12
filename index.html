@@ -18,17 +18,19 @@
         <script>
         function autoRoute()
         {
-           var urls = ['https://5fb3-103-215-237-34.ngrok-free.app/', 'https://d29d-103-215-237-34.ngrok-free.app/', 'https://b6ab-103-215-237-34.ngrok-free.app/', 'https://2109-103-215-237-34.ngrok-free.app/', 'https://91d1-103-215-237-34.ngrok-free.app/', 'https://a7bf-103-215-237-34.ngrok-free.app/', 'https://7014-103-215-237-34.ngrok-free.app/', 'https://767b-103-215-237-34.ngrok-free.app/', 'https://1c12-103-215-237-34.ngrok-free.app/', 'https://54a2-103-215-237-34.ngrok-free.app/', 'https://68d8-103-215-237-34.ngrok-free.app/', 'https://c8e1-103-215-237-34.ngrok-free.app/'];
+           var urls = ['https://a9e7-103-215-237-34.ngrok-free.app/', 'https://4a02-103-215-237-34.ngrok-free.app/', 'https://13e6-103-215-237-34.ngrok-free.app/', 'https://3062-103-215-237-34.ngrok-free.app/', 'https://4ebb-103-215-237-34.ngrok-free.app/', 'https://9d27-103-215-237-34.ngrok-free.app/', 'https://8180-103-215-237-34.ngrok-free.app/', 'https://c77f-103-215-237-34.ngrok-free.app/', 'https://2afd-103-215-237-34.ngrok-free.app/', 'https://c1f8-103-215-237-34.ngrok-free.app/', 'https://30b3-103-215-237-34.ngrok-free.app/', 'https://420b-103-215-237-34.ngrok-free.app/'];
            if (urls.length == 0) {location.reload();}
            var oldURL = localStorage.lastURL;
            if (urls.includes(oldURL)) 
            {
+               console.log("OLD");
                console.log(oldURL);
                //autoRedirect(oldURL);
            }
            else
            {
                url = urls[Math.floor(Math.random() * urls.length)];
+               console.log("NEW");
                console.log(url);
                //autoRedirect(url);
            }
