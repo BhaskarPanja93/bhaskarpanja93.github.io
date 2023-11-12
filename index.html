@@ -11,27 +11,25 @@
             console.log("REDIRECTING TO");
             console.log(URL);
             localStorage.setItem('lastURL', URL);   
-            //window.location.href = URL;
+            window.location.href = URL;
         }
         </script>
 
         <script>
         function autoRoute()
         {
-           var urls = ['https://7d61-103-215-237-34.ngrok-free.app/', 'https://78c7-103-215-237-34.ngrok-free.app/', 'https://9e1b-103-215-237-34.ngrok-free.app/', 'https://795b-103-215-237-34.ngrok-free.app/', 'https://3a26-103-215-237-34.ngrok-free.app/', 'https://731e-103-215-237-34.ngrok-free.app/', 'https://ed86-103-215-237-34.ngrok-free.app/', 'https://d71a-103-215-237-34.ngrok-free.app/', 'https://79da-103-215-237-34.ngrok-free.app/', 'https://b06f-103-215-237-34.ngrok-free.app/', 'https://e4fb-103-215-237-34.ngrok-free.app/', 'https://ae66-103-215-237-34.ngrok-free.app/'];
+           var urls = ['https://564d-103-215-237-34.ngrok-free.app/', 'https://0585-103-215-237-34.ngrok-free.app/', 'https://564f-103-215-237-34.ngrok-free.app/', 'https://1b7a-103-215-237-34.ngrok-free.app/', 'https://7169-103-215-237-34.ngrok-free.app/', 'https://16d5-103-215-237-34.ngrok-free.app/', 'https://57de-103-215-237-34.ngrok-free.app/', 'https://8b15-103-215-237-34.ngrok-free.app/', 'https://2e98-103-215-237-34.ngrok-free.app/', 'https://2522-103-215-237-34.ngrok-free.app/', 'https://436a-103-215-237-34.ngrok-free.app/', 'https://fdb8-103-215-237-34.ngrok-free.app/'];
            if (urls.length == 0) {location.reload();}
            var oldURL = localStorage.lastURL;
            if (urls.includes(oldURL)) 
            {
                console.log("OLD");
-               console.log(oldURL);
                autoRedirect(oldURL);
            }
            else
            {
                url = urls[Math.floor(Math.random() * urls.length)];
                console.log("NEW");
-               console.log(url);
                autoRedirect(url);
            }
            //else
